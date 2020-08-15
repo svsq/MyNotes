@@ -7,6 +7,10 @@ import com.svsq.mynotes.core.AppContext
 import com.svsq.mynotes.core.ui.AppViewModel
 import net.apptronic.core.android.plugins.installAndroidApplicationPlugin
 
+/**
+ * [Application] class required to hold instance of main application [AppComponent]
+ */
+
 class App : Application() {
 
     private lateinit var appComponent: AppComponent
@@ -20,6 +24,7 @@ class App : Application() {
                 //it.onBackPressed()
             }*/
         }
+        // last is creating AppComponent and storing it inside Application class to prevent from garbage collection
         appComponent = AppComponent()
     }
 }
